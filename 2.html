@@ -1,0 +1,42 @@
+<link rel="stylesheet" type="text/css" href="general/style.css">
+<style>
+  #div1{
+    display:none;
+    width: 200px;
+    height: 200px;
+  }
+</style>
+<footer>
+<a href="http://zh-tw.learnlayout.com/display.html" target="_blank">2 / 19</a>
+</footer>
+
+
+<div id=div1></div>
+
+換行<br>
+<p>
+display：
+<select onchange="display(this.value)">
+  <option value="none">none: 元素消失</option>
+  <option value="block">block: 獨立的區塊</option>
+  <option value="inline">inline: 跟著行的規則走</option>
+  <option value="inline-block">inline-block: 在行中特立獨行</option>
+</select>
+</p>
+<p>
+visibility：
+<select onchange="visibility(this.value)">
+  <option value="visible">visible：看得見</option>
+  <option value="hidden">hidden：他還在</option>
+</select>
+</p>
+
+<script>
+  function display(state){
+    document.getElementById("div1").style.display = state;
+  }
+
+  function visibility(state){
+    document.getElementById("div1").style.visibility = state;
+  }
+</script>

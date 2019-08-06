@@ -1,0 +1,42 @@
+<link rel="stylesheet" type="text/css" href="general/style.css">
+<style>
+#div1 {
+  width: 500px;
+  margin: 20px auto;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+#div2 {
+  width: 500px;
+  height: 100px;
+  margin: 20px auto;
+  padding: 100px;
+  border: solid blue 10px;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+</style>
+<footer>
+<a href="http://zh-tw.learnlayout.com/box-sizing.html" target="_blank">6 / 19</a>
+</footer>
+
+<div id=div1>這兩個區塊</div>
+<div id=div2>看起來<br>有對齊</div>
+
+<!--
+  筆記用
+    使用box-sizing: border-box;之後，瀏覽器會幫忙解決細部設定的問題，使顯示出的元素盡可能符合參數的設定。
+
+    寬高經設定之後外觀大致就固定了，除特殊情況(padding超過寬或高)外，不會再受下列參數影響
+
+    margin效果不變，會產生要求與其他元素間的最短距離
+
+    padding會產生元素邊界到內容的距離，可對四方設定
+    如果padding超過限制的寬高，會自己擴張到足夠的空間，然後在對齊padding的邊界開始放內容
+    舉例來說，高100，padding也100的情況，高會被撐高到200，然後內容在左上往右下的(100, 100)開始
+    如果內容超出區塊範圍就自行處理了，看是要用捲軸還是什麼方法
+
+    border會在區塊的範圍向內加上邊框
+-->

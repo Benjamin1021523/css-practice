@@ -1,0 +1,37 @@
+<link rel="stylesheet" type="text/css" href="general/style.css">
+<style>
+#div1 {
+  width: 500px;
+  margin: 20px auto;
+}
+#div2 {
+  width: 500px;
+  height: 100px;
+  margin: 20px auto;
+  padding: 50px;
+  border: solid blue 10px;
+}
+</style>
+<footer>
+<a href="http://zh-tw.learnlayout.com/box-model.html" target="_blank">5 / 19</a>
+</footer>
+
+<div id=div1>小</div>
+<div id=div2>大<br>很大</div>
+
+<!--
+  筆記用
+    一開始設定的width和height是針對內容使用的空間，但是區塊本身佔的空間還受其他參數影響
+
+    margin會產生要求從邊界到其他元素間的最短距離，可對四方不同設定
+    兩元素間的margin分別是15和20，其間距是20
+
+    padding會產生元素邊界到內容的距離，可對四方設定
+    如果寬高已經設定，padding會使原本的width和height往外擴張指定距離達到邊界
+
+    border會在邊界外加上邊框，屬於原區塊向外延伸的部分
+
+    同樣的width和height，只要padding和border不同就會無法對齊，所以設計時需要認真算清楚
+
+    不過，這是以前的問題
+-->

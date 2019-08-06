@@ -1,0 +1,60 @@
+<link rel="stylesheet" type="text/css" href="general/style.css">
+<style>
+  div{
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  #list{
+    position: absolute;
+    width: 150px;
+    left: 0;
+    border: solid 3px blue;
+  }
+  #container{
+    position: relative;
+  }
+  .section{
+    margin-left: 150px;
+    border: solid 3px orange;
+  }
+</style>
+<footer>
+<a href="http://zh-tw.learnlayout.com/position-example.html" target="_blank">8 / 19</a>
+</footer>
+
+<div id=container>
+  <div id=list><!--這是一個放在左邊的清單，為了顯示好看不應該被壓縮得太窄-->
+    <ul>
+      <li>
+        <a href="position-example.html">首頁</a>
+      </li>
+      <li>
+        <a href="position-example.html">關於我們</a>
+      </li>
+      <li>
+        <a href="position-example.html">產品資訊</a>
+      </li>
+      <li>
+        <a href="position-example.html">服務項目</a>
+      </li>
+      <li>
+        <a href="position-example.html">作品展示</a>
+      </li>
+      <li>
+        <a href="position-example.html">聯絡我們</a>
+      </li>
+    </ul>
+  </div>
+  <div class=section>
+    這個方塊應該要在清單的右邊才對。
+  </div>
+  <div class=section>
+    <p>剛剛卡了好久不知道為什麼list一直沒辦法定義寬度，空間都用到最右邊了，結果發現我把id寫成class結果當然#list再怎麼想都不會有用啊搞笑喔。</p>
+    <p>後來總算把大小設定好了，邊框也出現了，但是我右邊的.section卻沒辦法和#list並列，而是會顯示在#list的下面，同時還保留著設定的margin-left，看起來怪空虛的。最後發現問題是#list沒有定義position: absolute，為什麼會是這個的影響？或者說為什麼變成絕對座標，右邊的空間就可以用了？？</p>
+    <p>是的沒錯，我就是不用網站示範的nav和section，這兩個突然就跑出來的東西而且完全沒解釋為什麼要用它們，而且又不是必要的，這點我在嘗試全換成div的時候就確定了，所以最後全換成div了。</p>
+  </div>
+  <div class=section>
+    試著把螢幕左右縮放試試，左邊定義了寬度的部分可以保持原樣，右邊就變得細長了。
+  </div>
+</div>

@@ -1,0 +1,63 @@
+<link rel="stylesheet" type="text/css" href="general/style.css">
+<style>
+  #div1{
+    width: 200px;
+    height: 200px;
+  }
+  #re1{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    top: -10px;
+    left: 10px;
+    border: solid 3px orange;
+  }
+  #re2{
+    position: relative;
+    width:200px;
+    height: 200px;
+    border: solid 5px blue;
+    top: -190px;
+    left: -10px;
+  }
+  #ab1{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    top: 100px;
+    left: 300px;
+    border: solid 3px black;
+  }
+
+  #fixed{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 200px;
+    background-color: white;
+  }
+</style>
+<footer>
+<a href="http://zh-tw.learnlayout.com/position.html" target="_blank">7 / 19</a>
+</footer>
+
+<div id=div1>我只是個普通的區塊</div>
+<div id=re1>我原本應該更左下一點點</div>
+<div id=ab1>我的左上角在這個座標(300, 100)</div>
+<div id=re2>和前一個快重疊了</div>
+<div id=div1>藍色的往上跑了中間空一大截</div>
+<div id=fixed>你會發現這個方塊一直在畫面的右下角，不管捲軸怎麼拉<br>
+(然後footer就變得有點呵呵</div>
+<br>
+<br>
+<!--
+  筆記用
+    一般的元素就照著程式碼的順序由上而下一路擺下來
+
+    relative會根據原本位置移動相對座標，但是原本佔用的位子並不會分給下一個元素
+
+    absolute需指定網頁中明確的座標，否則元素會出現在原本照順序會出現的地方
+    滾動滾輪之後會和其他元素一起移動
+
+    fixed也要給明確座標，不過差別是他在「畫面」的固定位置
+-->
